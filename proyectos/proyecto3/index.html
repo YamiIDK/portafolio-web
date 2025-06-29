@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contadores y Asesores | Soluciones Contables</title>
+    <meta name="description" content="Ofrecemos servicios de contabilidad, declaración de impuestos y asesoría financiera para empresas y particulares.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navigation">
+                <a href="#hero" class="logo">Contable<span class="logo-red">Plus</span></a>
+                <ul class="nav-menu">
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <h1 class="fade-in">La tranquilidad financiera de tu negocio, en manos expertas.</h1>
+                <p class="fade-in">Soluciones contables precisas y personalizadas para que te centres en crecer.</p>
+                <a href="#contact" class="btn btn-primary fade-in">Solicita una Asesoría</a>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">📊</div>
+                        <h3>Contabilidad General</h3>
+                        <p>Llevamos un registro detallado y organizado de todas tus operaciones financieras.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">🧾</div>
+                        <h3>Declaración de Impuestos</h3>
+                        <p>Preparamos y presentamos tus declaraciones de impuestos de forma puntual y correcta.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">💡</div>
+                        <h3>Asesoría Financiera</h3>
+                        <p>Te ofrecemos estrategias y consejos para optimizar tus recursos y mejorar tu rentabilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container about-content">
+                <div class="about-text fade-in">
+                    <h2 class="section-title">Comprometidos con tu Éxito</h2>
+                    <p>En <strong>ContablePlus</strong>, somos más que contadores; somos tus aliados estratégicos. Con más de 15 años de experiencia, nuestro equipo de profesionales certificados se dedica a entender las necesidades únicas de tu negocio para ofrecerte soluciones a medida que impulsan tu crecimiento y garantizan tu cumplimiento normativo.</p>
+                    <ul>
+                        <li><span class="check-red">✓</span> Atención personalizada y directa.</li>
+                        <li><span class="check-red">✓</span> Uso de tecnología de punta para mayor eficiencia.</li>
+                        <li><span class="check-red">✓</span> Máxima confidencialidad y ética profesional.</li>
+                    </ul>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Equipo de contadores trabajando en una oficina">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Hablemos</h2>
+                <p class="contact-subtitle">Completa el formulario y nos pondremos en contacto a la brevedad.</p>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Tu Nombre Completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    <div id="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ContablePlus. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
