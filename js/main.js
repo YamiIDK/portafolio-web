@@ -330,7 +330,17 @@ async function loadProjects() {
   const repoOwner = 'YamiIDK';
   const repoName = 'proyectos';
   const projectsPath = 'projects';
-  const token = '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';
+  
+  // Obtener el token de la configuración
+  const token = window.config.githubToken;
+  
+  if (!token) {
+    console.error('No se encontró el token de GitHub');
+    if (projectsSlider) {
+      projectsSlider.innerHTML = '<p class="text-center">Error: GitHub token not found</p>';
+    }
+    return;
+  }
   
   try {
     console.log("Cargando proyectos desde GitHub...");

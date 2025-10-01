@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Replace GitHub token in config
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Usamos GH_TOKEN en lugar de GITHUB_TOKEN
+        run: |
+          # Reemplazar el token en el archivo de configuración
+          sed "s/%%GH_TOKEN%%/${{ secrets.GH_TOKEN }}/g" config.template.js > config.js
+          
+      - name: Verify config file
+        run: |
+          echo "Config file content:"
+          cat config.js
+          
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Este GITHUB_TOKEN sí es válido (es el token de GitHub Actions)
+          publish_dir: .
+          destination_dir: .
+          keep_files: true
