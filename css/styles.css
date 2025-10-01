@@ -378,3 +378,85 @@ a:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(114, 38, 113, 0.4);
 }
+/* Mobile Menu Styles */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  background-color: rgba(57, 19, 56, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+#mobile-menu.active {
+  max-height: 500px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+#mobile-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#mobile-menu a:hover {
+  color: #722671;
+}
+
+#mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+/* Mobile Menu Button */
+#mobile-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+#mobile-menu-btn:hover {
+  transform: scale(1.1);
+}
+
+#mobile-menu-btn:focus {
+  outline: none;
+}
+
+/* Animation for mobile menu button */
+#mobile-menu-btn svg {
+  transition: transform 0.3s ease;
+}
+
+#mobile-menu.active + #mobile-menu-btn svg {
+  transform: rotate(90deg);
+}
+
+/* Body overflow when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 0;
+  }
+  
+  #mobile-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 40;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #mobile-menu.active {
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+}

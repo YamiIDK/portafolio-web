@@ -11,9 +11,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      pages: write
-      id-token: write
+      contents: read # Permite leer el código fuente
+      pages: write # Permite escribir en GitHub Pages
+      id-token: write # Necesario para el despliegue moderno
     
     environment:
       name: github-pages
@@ -23,29 +23,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         
+      # === PASO CRÍTICO: Reemplazar el marcador de posición ===
+      # Usaremos el PAT del usuario (secrets.GH_TOKEN) que tiene permisos de API.
+      # ¡Asegúrate de que este Secret exista y tenga el scope 'public_repo'!
       - name: Replace GitHub token in config
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          # Reemplazar el token en el archivo de configuración
-          if [ "$RUNNER_OS" == "Windows" ]; then
-            powershell -Command "(Get-Content config.template.js) -replace '%%GH_TOKEN%%', '${{ secrets.GH_TOKEN }}' | Set-Content config.js"
-          else
-            sed "s/%%GH_TOKEN%%/${{ secrets.GH_TOKEN }}/g" config.template.js > config.js
-          fi
+          # 1. Creamos el archivo config.js a partir del template
+          cp config.template.js config.js
+
+          # 2. Reemplazamos el marcador de posición '%%GH_TOKEN%%'
+          #    Usamos el token almacenado en Secrets para que el JS lo use.
+          #    Usamos el carácter '#' como delimitador para evitar problemas con barras en el token.
+          sed -i "s#%%GH_TOKEN%%#${{ secrets.GH_TOKEN }}#g" config.js
           
-      - name: Verify config file
+      - name: Verify config file (Check for token insertion)
         run: |
-          echo "Config file content:"
-          cat config.js
+          echo "Primeros 50 caracteres de githubToken:"
+          # Muestra el contenido del token, ofuscando la mayor parte por seguridad.
+          # Si esto imprime 'ghp_', el reemplazo funcionó.
+          grep 'githubToken' config.js | head -c 50
+          echo "..."
           
       - name: Setup Pages
         uses: actions/configure-pages@v5
         
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4 # <-- Aquí está la actualización clave
+        uses: actions/upload-pages-artifact@v4
         with:
-          # Subir todo el directorio
+          # Subir todo el directorio, incluyendo el config.js modificado
           path: '.'
           
       - name: Deploy to GitHub Pages
