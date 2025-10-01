@@ -1,0 +1,55 @@
+{
+  "header": {
+    "name": "Cristian Gallardo",
+    "home": "Inicio",
+    "profile": "Mi Perfil",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Arquitecto de Soluciones Digitales y Desarrollador Web Full Stack",
+    "subtitle": "Construyo plataformas digitales robustas y escalables, enfocadas en ofrecer alto valor técnico a costos sostenibles para negocios en crecimiento.",
+    "cta1": "Explorar Proyectos",
+    "cta2": "Contactar"
+  },
+  "profile": {
+    "title": "Mi Perfil",
+    "perspective": "La Perspectiva Gallardo",
+    "perspective_text": "Creo en código limpio y tecnologías escalables. Uso herramientas open-source para reducir costos sin sacrificar calidad. Cada línea de código debe resolver un problema real del negocio.",
+    "educational": "Rol Educativo",
+    "educational_text": "Además del desarrollo, comparto mi expertise técnico a través de plataformas educativas para fomentar mejores prácticas en la comunidad.",
+    "trajectory": "Trayectoria",
+    "trajectory_items": [
+      "+5 años desarrollando soluciones web empresariales",
+      "Especialista en arquitecturas escalables y optimización de costos",
+      "Enfoque en startups y empresas en crecimiento"
+    ]
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Bases de Datos",
+    "devops": "DevOps"
+  },
+  "projects": {
+    "title": "Proyectos Recientes",
+    "expand": "Ver todos",
+    "close": "Cerrar",
+    "code": "Código",
+    "demo": "Demo"
+  },
+  "contact": {
+    "title": "Colaboremos en tu Próxima Solución Digital",
+    "subtitle": "Si tu negocio requiere una plataforma robusta y un enfoque técnico eficiente en costos, contáctame para evaluar tu proyecto sin compromiso.",
+    "form_name": "Nombre",
+    "form_email": "Email",
+    "form_message": "Mensaje",
+    "form_submit": "Enviar Mensaje",
+    "direct_contact": "O contáctame directamente:"
+  },
+  "footer": {
+    "copyright": "© 2023 - Cristian Gallardo - Soluciones Digitales"
+  }
+}

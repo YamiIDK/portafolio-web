@@ -1,0 +1,55 @@
+{
+  "header": {
+    "name": "Cristian Gallardo",
+    "home": "Home",
+    "profile": "My Profile",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Digital Solutions Architect and Full Stack Web Developer",
+    "subtitle": "I build robust and scalable digital platforms, focused on delivering high technical value at sustainable costs for growing businesses.",
+    "cta1": "Explore Projects",
+    "cta2": "Contact"
+  },
+  "profile": {
+    "title": "My Profile",
+    "perspective": "The Gallardo Perspective",
+    "perspective_text": "I believe in clean code and scalable technologies. I use open-source tools to reduce costs without sacrificing quality. Every line of code should solve a real business problem.",
+    "educational": "Educational Role",
+    "educational_text": "In addition to development, I share my technical expertise through educational platforms to promote best practices in the community.",
+    "trajectory": "Trajectory",
+    "trajectory_items": [
+      "+5 years developing enterprise web solutions",
+      "Specialist in scalable architectures and cost optimization",
+      "Focus on startups and growing companies"
+    ]
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Databases",
+    "devops": "DevOps"
+  },
+  "projects": {
+    "title": "Recent Projects",
+    "expand": "View All",
+    "close": "Close",
+    "code": "Code",
+    "demo": "Demo"
+  },
+  "contact": {
+    "title": "Let's Collaborate on Your Next Digital Solution",
+    "subtitle": "If your business needs a robust platform and a cost-efficient technical approach, contact me to evaluate your project with no commitment.",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_message": "Message",
+    "form_submit": "Send Message",
+    "direct_contact": "Or contact me directly:"
+  },
+  "footer": {
+    "copyright": "© 2023 - Cristian Gallardo - Digital Solutions"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Cristian Gallardo - Soluciones Digitales",
+  "short_name": "Cristian Gallardo",
+  "description": "Desarrollo soluciones digitales de alto rendimiento con optimización de costos para startups en crecimiento",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1d091c",
+  "theme_color": "#722671",
+  "icons": [
+    {
+      "src": "/assets/img/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

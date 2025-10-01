@@ -1,158 +1,307 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristian Gallardo - Desarrollador Web</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristian Gallardo | Soluciones Digitales</title>
+  
+  <!-- SEO -->
+  <meta name="description" content="Desarrollo soluciones digitales de alto rendimiento con optimización de costos para startups en crecimiento">
+  <link rel="canonical" href="https://tudominio.com">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+
+
+<!-- favicon -->
+<!-- Favicon principal -->
+<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+<!-- Favicon para dispositivos Apple -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+<!-- Favicon en diferentes tamaños -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+<!-- Manifest para PWA -->
+<link rel="manifest" href="assets/img/site.webmanifest">
 </head>
-<body>
+<body class="bg-[#1d091c] text-white font-['Inter']">
+  
+  <!-- Header -->
+  <header class="fixed w-full z-50 bg-[#1d091c]/80 backdrop-blur-md border-b border-[#391338]/30">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div id="header-name" class="text-xl font-space-grotesk">Cristian Gallardo</div>
+      
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#inicio" class="hover:text-[#722671] transition">Inicio</a>
+        <a href="#perfil" class="hover:text-[#722671] transition">Mi Perfil</a>
+        <a href="#habilidades" class="hover:text-[#722671] transition">Habilidades</a>
+        <a href="#proyectos" class="hover:text-[#722671] transition">Proyectos</a>
+        <a href="#contacto" class="hover:text-[#722671] transition">Contacto</a>
+      </nav>
+      
+      <!-- Language Switch -->
+      <select id="lang-switch" class="bg-[#391338]/50 border border-[#561c54] rounded px-3 py-1 text-sm">
+        <option value="es">🇪🇸 Español</option>
+        <option value="en">🇺🇸 English</option>
+      </select>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-[#391338]/90 backdrop-blur-md">
+      <div class="container mx-auto px-4 py-4 space-y-3">
+        <a href="#inicio" class="block hover:text-[#722671]">Inicio</a>
+        <a href="#perfil" class="block hover:text-[#722671]">Mi Perfil</a>
+        <a href="#habilidades" class="block hover:text-[#722671]">Habilidades</a>
+        <a href="#proyectos" class="block hover:text-[#722671]">Proyectos</a>
+        <a href="#contacto" class="block hover:text-[#722671]">Contacto</a>
+      </div>
+    </nav>
+  </header>
 
-    <header class="header">
-        <nav class="nav">
-            <a href="#inicio" class="nav-logo">CG</a>
-            <ul class="nav-menu">
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Hero Section -->
+  <section id="inicio" class="min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <h1 class="text-4xl md:text-6xl font-space-grotesk mb-6">
+          Arquitecto de Soluciones Digitales y Desarrollador Web Full Stack
+        </h1>
+        <p id="hero-subtitle" class="text-xl mb-8 text-[#e0e0e0]">
+          Construyo plataformas digitales robustas y escalables, enfocadas en ofrecer alto valor técnico a costos sostenibles para negocios en crecimiento.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#proyectos" class="btn-primary">
+            Explorar Proyectos
+          </a>
+          <a href="#contacto" class="border border-[#722671] hover:bg-[#722671]/20 px-6 py-3 rounded-lg font-semibold transition">
+            Contactar
+          </a>
+        </div>
+      </div>
+      <div data-aos="fade-left" class="flex justify-center">
+        <img src="assets/img/tu-foto.jpg" alt="Cristian Gallardo" class="rounded-xl max-w-full h-auto shadow-2xl">
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h1>Cristian Gallardo</h1>
-                <p>Programador y Desarrollador Web</p>
-                <a href="#proyectos" class="btn">Ver mis proyectos</a>
-            </div>
-        </section>
+  <!-- Mi Perfil -->
+  <section id="perfil" class="py-20 bg-[#391338]/20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-space-grotesk mb-12 text-center" data-aos="fade-up">Mi Perfil</h2>
+      <div class="max-w-3xl mx-auto">
+        <div class="translucido rounded-xl p-8" data-aos="fade-up">
+          <h3 class="text-2xl font-semibold mb-4 text-[#722671]">La Perspectiva Gallardo</h3>
+          <p class="mb-6">
+            Creo en código limpio y tecnologías escalables. Uso herramientas open-source para reducir costos sin sacrificar calidad. 
+            Cada línea de código debe resolver un problema real del negocio.
+          </p>
+          
+          <h3 class="text-2xl font-semibold mb-4 text-[#722671]">Rol Educativo</h3>
+          <p class="mb-6">
+            Además del desarrollo, comparto mi expertise técnico a través de plataformas educativas para fomentar mejores prácticas en la comunidad.
+          </p>
+          
+          <h3 class="text-2xl font-semibold mb-4 text-[#722671]">Trayectoria</h3>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <span class="text-[#722671] mr-2">▸</span>
+              <span>+5 años desarrollando soluciones web empresariales</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#722671] mr-2">▸</span>
+              <span>Especialista en arquitecturas escalables y optimización de costos</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#722671] mr-2">▸</span>
+              <span>Enfoque en startups y empresas en crecimiento</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <section id="sobre-mi" class="section">
-            <div class="container">
-                <h2>Sobre Mí</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p class="justificado">
-                            ¡Hola! Soy Cristian Gallardo. Soy desarrollador web con una profunda pasión por crear soluciones digitales funcionales, eficientes y visualmente atractivas. Desde que descubrí la programación, me he enfocado en transformar ideas en experiencias interactivas, escalables y bien estructuradas, tanto en el frontend como en el backend.
+  <!-- Habilidades -->
+  <section id="habilidades" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-space-grotesk mb-12 text-center" data-aos="fade-up">Habilidades Técnicas</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+        <div class="skill-card">
+          <h3 class="text-xl font-semibold mb-4 text-[#722671]">Frontend</h3>
+          <ul class="space-y-2">
+            <li>React.js</li>
+            <li>Vue.js</li>
+            <li>Tailwind CSS</li>
+            <li>JavaScript ES6+</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3 class="text-xl font-semibold mb-4 text-[#722671]">Backend</h3>
+          <ul class="space-y-2">
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>Express.js</li>
+            <li>REST APIs</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3 class="text-xl font-semibold mb-4 text-[#722671]">Bases de Datos</h3>
+          <ul class="space-y-2">
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+            <li>Redis</li>
+            <li>Firebase</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3 class="text-xl font-semibold mb-4 text-[#722671]">DevOps</h3>
+          <ul class="space-y-2">
+            <li>Docker</li>
+            <li>Git</li>
+            <li>AWS</li>
+            <li>CI/CD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-A lo largo de mi trayectoria he trabajado en proyectos que van desde landing pages modernas, dashboards administrativos, hasta bots automatizados y aplicaciones web completas. Disfruto especialmente los desafíos que requieren lógica, diseño limpio y atención al detalle.
+  <!-- Proyectos -->
+  <section id="proyectos" class="py-20 bg-[#391338]/20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-space-grotesk mb-12 text-center" data-aos="fade-up">Proyectos Recientes</h2>
+      
+      <div class="relative" data-aos="fade-up">
+        <!-- Slider Container -->
+        <div id="projects-slider" class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Projects will be dynamically loaded here -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        
+        <!-- Expand Button -->
+        <button id="expand-projects" class="btn-primary absolute bottom-4 right-4">
+          Ver todos
+        </button>
+        
+        <!-- Expanded View (Hidden by default) -->
+        <div id="projects-grid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <!-- Projects will be dynamically loaded here -->
+        </div>
+      </div>
+    </div>
+  </section>
 
-Mi objetivo es seguir creciendo como desarrollador, colaborar en proyectos que generen impacto real y mantenerme siempre aprendiendo nuevas tecnologías. Lo que más me motiva es ver cómo el código que escribo se convierte en herramientas que otras personas pueden usar, disfrutar y escalar.
-                        </p>
-                        <p>
-                            <strong>Fecha de Nacimiento:</strong> 02/12/2001 <br>
-                            <strong>Ubicación:</strong> Caracas, Venezuela <br>
-                            <strong>Email:</strong> crisd.gallardo43211@gmail.com
-                        </p>
-                    </div>
-                    <div class="about-image">
-                        <div class="image-placeholder">
-                            <img src="proyectos\foto.jpg" alt="Cristian Gallardo sonríe mirando a la cámara en un entorno de oficina moderna con luz natural y fondo desenfocado, transmitiendo una actitud profesional y amigable">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- Contacto -->
+<section id="contacto" class="py-20 bg-[#391338]/20">
+  <div class="container mx-auto px-4">
+    <h2 id="contact-title" class="text-3xl font-space-grotesk mb-12 text-center" data-aos="fade-up">Colaboremos en tu Próxima Solución Digital</h2>
+    
+    <div class="max-w-2xl mx-auto">
+      <p id="contact-subtitle" class="text-center mb-8 text-lg" data-aos="fade-up">
+        Si tu negocio requiere una plataforma robusta y un enfoque técnico eficiente en costos, contáctame para evaluar tu proyecto sin compromiso.
+      </p>
+      
+      <form id="contact-form" class="bg-[#1d091c]/80 backdrop-blur-sm border-2 border-[#722671] rounded-xl p-8 shadow-2xl" data-aos="fade-up">
+        <div class="mb-6">
+          <label id="contact-name-label" for="name" class="block mb-2 text-white font-semibold">Nombre</label>
+          <input type="text" id="name" name="name" required 
+                 class="w-full bg-[#391338]/70 border-2 border-[#561c54] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#722671] focus:ring-2 focus:ring-[#722671]/50 transition"
+                 placeholder="Tu nombre completo">
+        </div>
+        
+        <div class="mb-6">
+          <label id="contact-email-label" for="email" class="block mb-2 text-white font-semibold">Email</label>
+          <input type="email" id="email" name="email" required 
+                 class="w-full bg-[#391338]/70 border-2 border-[#561c54] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#722671] focus:ring-2 focus:ring-[#722671]/50 transition"
+                 placeholder="tu@email.com">
+        </div>
+        
+        <div class="mb-6">
+          <label id="contact-message-label" for="message" class="block mb-2 text-white font-semibold">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required 
+                      class="w-full bg-[#391338]/70 border-2 border-[#561c54] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#722671] focus:ring-2 focus:ring-[#722671]/50 transition resize-none"
+                      placeholder="Cuéntame sobre tu proyecto..."></textarea>
+        </div>
+        
+        <button id="contact-submit-btn" type="submit" 
+                class="w-full bg-gradient-to-r from-[#722671] to-[#561c54] hover:from-[#561c54] hover:to-[#391338] text-white font-bold py-4 px-6 rounded-lg shadow-lg transform transition hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#722671]/50">
+          Enviar Mensaje
+        </button>
+      </form>
+      
+      <div class="mt-12 text-center" data-aos="fade-up">
+        <p id="contact-direct-text" class="mb-4 text-white text-lg">O contáctame directamente:</p>
+        <div class="flex justify-center space-x-6">
+          <a href="mailto:tuemail@dominio.com" class="bg-[#722671]/20 hover:bg-[#722671]/40 p-3 rounded-full transition">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/tuusuario" target="_blank" class="bg-[#722671]/20 hover:bg-[#722671]/40 p-3 rounded-full transition">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/YamiIDK" target="_blank" class="bg-[#722671]/20 hover:bg-[#722671]/40 p-3 rounded-full transition">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section id="habilidades" class="section section-light">
-            <div class="container">
-                <h2>Habilidades Técnicas</h2>
-                <div class="slider-container">
-                    <div class="slider">
-                        <div class="slide">
-                            <div class="tech-placeholder">
-                                <img src="https://i.imgur.com/QJabV7E.png" alt="HTML5 logo in white stylized shield shape on a bright blue background with the number 5 in the center, representing web development technology, no additional text or emotional tone" style="max-width: 100%; height: auto;">
-                            </div>
-                            <h3>HTML5</h3>
-                        </div>
-                        <div class="slide">
-                            <div class="tech-placeholder">
-                                <img src="https://i.imgur.com/O4jsOej.png" alt="CSS3 logo in a white stylized shield shape on a bright blue background with the number 3 in the center representing web development technology no additional text or emotional tone" style="max-width: 100%; height: auto;">
-                            </div>
-                            <h3>CSS3</h3>
-                        </div>
-                        <div class="slide">
-                             <div class="tech-placeholder">
-                                <img src="https://i.imgur.com/8x4USTK.png" alt="Yellow shield-shaped JavaScript logo with bold black letters JS in the center on a white background representing web development technology no emotional tone" style="max-width: 100%; height: auto;">
-                             </div>
-                            <h3>JavaScript</h3>
-                        </div>
-                        <div class="slide">
-                             <div class="tech-placeholder">
-                                <img src="https://i.imgur.com/7PbGh2R.png" alt="Python logo featuring a blue and yellow stylized snake forming a circular shape with two white dots representing eyes on a plain background no additional text or emotional tone" style="max-width: 100%; height: auto;">
-                             </div>
-                            <h3>Python</h3>
-                        </div>
-                    </div>
-                    <button class="slider-btn prev">&lt;</button>
-                    <button class="slider-btn next">&gt;</button>
-                </div>
-            </div>
-        </section>
+  <!-- Footer -->
+  <footer class="py-8 border-t border-[#391338]/50">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 - Cristian Gallardo - Soluciones Digitales</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="https://linkedin.com/in/tuusuario" target="_blank" class="hover:text-[#722671] transition">
+          LinkedIn
+        </a>
+        <a href="https://github.com/YamiIDK" target="_blank" class="hover:text-[#722671] transition">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </footer>
 
-        <section id="proyectos" class="section">
-            <div class="container">
-                <h2>Mis Proyectos</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image-placeholder"><img src="proyectos/imgproyecto1.PNG"></div>
-                        <h3>Nombre del Proyecto 1</h3>
-                        <p>Una breve descripción de tu proyecto. Explica su propósito, las tecnologías utilizadas y tu rol en su desarrollo.</p>
-                        <div class="project-links">
-                            <a href="proyectos/proyecto1/index.html" class="btn-secondary" target="_blank">Ver Demo</a>
-                            <a href="https://github.com/YamiIDK/portafolio-web/tree/main/proyectos/proyecto1" class="btn-secondary" target="_blank">Código Fuente</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image-placeholder"><img src="proyectos/imgproyecto2.PNG"></div>
-                        <h3>Nombre del Proyecto 2</h3>
-                        <p>Una breve descripción de tu proyecto. Explica su propósito, las tecnologías utilizadas y tu rol en su desarrollo.</p>
-                        <div class="project-links">
-                            <a href="proyectos/proyecto2/index.html" class="btn-secondary" target="_blank">Ver Demo</a>
-                            <a href="https://github.com/YamiIDK/portafolio-web/tree/main/proyectos/proyecto2" class="btn-secondary" target="_blank">Código Fuente</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image-placeholder"><img src="proyectos/imgproyecto3.PNG"></div>
-                        <h3>Nombre del Proyecto 3</h3>
-                        <p>Una breve descripción de tu proyecto. Explica su propósito, las tecnologías utilizadas y tu rol en su desarrollo.</p>
-                        <div class="project-links">
-                            <a href="proyectos/proyecto3/index.html" class="btn-secondary" target="_blank">Ver Demo</a>
-                            <a href="https://github.com/YamiIDK/portafolio-web/tree/main/proyectos/proyecto3" class="btn-secondary" target="_blank">Código Fuente</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="section section-light">
-            <div class="container">
-                <h2>Contacto</h2>
-                <p>¿Interesado en colaborar? Envíame un mensaje.</p>
-                <form class="contact-form" action="https://formspree.io/f/xovwylld" method="POST">
-            <input type="text" name="name" placeholder="Tu Nombre" required>
-            <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-            <textarea name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
-            <button type="submit" class="btn">Enviar Mensaje</button>
-        </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Cristian Gallardo. Todos los derechos reservados.</p>
-            </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_TRACKING_ID');
+  </script>
 </body>
 </html>

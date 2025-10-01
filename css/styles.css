@@ -1,0 +1,380 @@
+/* Variables de color */
+:root {
+  --color1: #722671;
+  --color2: #561c54;
+  --color3: #391338;
+  --color4: #1d091c;
+  --color5: #000000;
+}
+
+/* Estilos base */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color4);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Tipografía personalizada */
+.font-space-grotesk {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Efectos de transparencia */
+.translucido {
+  background: rgba(114, 38, 113, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Header */
+header {
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(29, 9, 28, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Navegación móvil */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#mobile-menu.active {
+  max-height: 500px;
+}
+
+/* Secciones */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tarjetas de habilidades */
+.skill-card {
+  background-color: rgba(57, 19, 56, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(86, 28, 84, 0.3);
+  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.skill-card:hover {
+  border-color: var(--color1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(114, 38, 113, 0.3);
+}
+
+/* Slider de proyectos */
+.swiper {
+  width: 100%;
+  height: 400px;
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color1) !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color1) !important;
+}
+
+/* Tarjetas de proyectos */
+.project-card {
+  background: rgba(57, 19, 56, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(86, 28, 84, 0.3);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(114, 38, 113, 0.3);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card-content {
+  padding: 1.5rem;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color1);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project-tech span {
+  background: rgba(114, 38, 113, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+/* Botón expandir proyectos */
+#expand-projects {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* Grid de proyectos expandido */
+#projects-grid {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Formulario de contacto */
+input, textarea {
+  background: rgba(29, 9, 28, 0.5) !important;
+  border: 1px solid rgba(86, 28, 84, 0.5) !important;
+  color: white !important;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--color1) !important;
+  box-shadow: 0 0 0 3px rgba(114, 38, 113, 0.2);
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Botones */
+button, .btn-primary {
+  background-color: var(--color1);
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+button:hover, .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(114, 38, 113, 0.4);
+}
+
+/* Footer */
+footer {
+  background: rgba(29, 9, 28, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+/* Efectos de hover para enlaces */
+a:hover {
+  color: var(--color1);
+  transition: color 0.3s ease;
+}
+
+/* Animaciones AOS personalizadas */
+[data-aos="fade-right"] {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="fade-right"].aos-animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(50px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="fade-left"].aos-animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(30px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+  .swiper {
+    height: 300px;
+  }
+  
+  .project-card img {
+    height: 150px;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  .text-xl {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    height: 250px;
+  }
+  
+  .project-card-content {
+    padding: 1rem;
+  }
+  
+  .project-card h3 {
+    font-size: 1rem;
+  }
+  
+  .project-tech span {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(114, 38, 113, 0.3);
+  border-top-color: var(--color1);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Efecto de parallax para el hero section */
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(114, 38, 113, 0.2), rgba(29, 9, 28, 0.8));
+  z-index: -1;
+}
+
+/* Estilos adicionales para el formulario */
+#contacto {
+  background-color: var(--color4);
+}
+
+#contacto label {
+  color: white !important;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+#contacto input,
+#contacto textarea {
+  background-color: rgba(29, 9, 28, 0.7) !important;
+  border: 1px solid rgba(114, 38, 113, 0.5) !important;
+  color: white !important;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+  border-color: var(--color1) !important;
+  box-shadow: 0 0 0 3px rgba(114, 38, 113, 0.2);
+  outline: none;
+}
+
+#contacto button[type="submit"] {
+  background-color: var(--color1) !important;
+  color: white !important;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contacto button[type="submit"]:hover {
+  background-color: var(--color2) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(114, 38, 113, 0.4);
+}
