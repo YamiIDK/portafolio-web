@@ -7,8 +7,16 @@ on:
     branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
       - name: Checkout repository
@@ -18,7 +26,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          # Usar una solución multiplataforma para reemplazar el token
+          # Reemplazar el token en el archivo de configuración
           if [ "$RUNNER_OS" == "Windows" ]; then
             powershell -Command "(Get-Content config.template.js) -replace '%%GH_TOKEN%%', '${{ secrets.GH_TOKEN }}' | Set-Content config.js"
           else
@@ -30,10 +38,14 @@ jobs:
           echo "Config file content:"
           cat config.js
           
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          destination_dir: .
-          keep_files: true
+          path: '.'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
