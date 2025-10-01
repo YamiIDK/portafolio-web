@@ -14,21 +14,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-          
-      - name: Install dependencies
-        run: npm ci
-        
       - name: Replace GitHub token in config
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Usamos GH_TOKEN en lugar de GITHUB_TOKEN
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          # Reemplazar el token en el archivo de configuración
-          sed "s/%%GH_TOKEN%%/${{ secrets.GH_TOKEN }}/g" config.template.js > config.js
+          # Usar una solución multiplataforma para reemplazar el token
+          if [ "$RUNNER_OS" == "Windows" ]; then
+            powershell -Command "(Get-Content config.template.js) -replace '%%GH_TOKEN%%', '${{ secrets.GH_TOKEN }}' | Set-Content config.js"
+          else
+            sed "s/%%GH_TOKEN%%/${{ secrets.GH_TOKEN }}/g" config.template.js > config.js
+          fi
           
       - name: Verify config file
         run: |
@@ -38,7 +33,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Este GITHUB_TOKEN sí es válido (es el token de GitHub Actions)
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           destination_dir: .
           keep_files: true
