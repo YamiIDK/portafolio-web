@@ -184,33 +184,32 @@
   </section>
 
   <!-- Proyectos -->
-  <section id="proyectos" class="py-20 bg-[#391338]/20">
+  <section id="proyectos" class="py-16 md:py-24">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-space-grotesk mb-12 text-center" data-aos="fade-up">Proyectos Recientes</h2>
-      
-      <div class="relative" data-aos="fade-up">
-        <!-- Slider Container -->
-        <div id="projects-slider" class="swiper">
-          <div class="swiper-wrapper">
-            <!-- Projects will be dynamically loaded here -->
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
+        <h2 id="projects-title" class="text-3xl md:text-4xl font-space-grotesk font-bold text-center mb-12" data-aos="fade-up">Proyectos Recientes</h2>
         
-        <!-- Expand Button -->
-        <button id="expand-projects" class="btn-primary absolute bottom-4 right-4">
-          Ver todos
-        </button>
-        
-        <!-- Expanded View (Hidden by default) -->
-        <div id="projects-grid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-          <!-- Projects will be dynamically loaded here -->
+        <div class="swiper-container-wrapper"> 
+            
+            <div id="projects-slider" class="swiper overflow-visible">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Cargando...</div> 
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            
+            <button id="expand-projects" class="btn-primary mt-8 mx-auto block" style="width: fit-content;">
+                Ver todos
+            </button>
         </div>
-      </div>
+
+        <div id="projects-grid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            </div>
+
     </div>
-  </section>
+</section>
 
 <!-- Contacto -->
 <section id="contacto" class="py-20 bg-[#391338]/20">
@@ -277,9 +276,9 @@
   <!-- Footer -->
   <footer class="py-8 border-t border-[#391338]/50">
     <div class="container mx-auto px-4 text-center">
-      <p>&copy; 2023 - Cristian Gallardo - Soluciones Digitales</p>
+      <p>&copy; 2025 - Cristian Gallardo - Soluciones Digitales</p>
       <div class="mt-4 flex justify-center space-x-4">
-        <a href="https://linkedin.com/in/tuusuario" target="_blank" class="hover:text-[#722671] transition">
+        <a href="https://linkedin.com/in/cristian-gallardo-935321160/" target="_blank" class="hover:text-[#722671] transition">
           LinkedIn
         </a>
         <a href="https://github.com/YamiIDK" target="_blank" class="hover:text-[#722671] transition">
@@ -303,7 +302,5 @@
     gtag('config', 'GA_TRACKING_ID');
   </script>
   <!-- Justo antes de cerrar el body -->
-<script src="config.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>
