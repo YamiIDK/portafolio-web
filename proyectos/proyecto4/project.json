@@ -3,6 +3,6 @@
   "description": "Proyecto de Práctica/Autodidacta (Demostración de Habilidades). Desarrollado para aplicar y validar conocimientos de desarrollo Backend en un entorno real.",
   "tech": ["Laravel 12", "PHP 8.3", "MySQL", "Tailwind CSS", "Git", "Bitbucket"],
   "githubUrl": "https://bitbucket.org/thegallardocode/sistema-contactos/src/main/",
-  "demoUrl": "Repo: https://bitbucket.org/thegallardocode/sistema-contactos/src/main/",
+  "demoUrl": "https://raw.githubusercontent.com/YamiIDK/portafolio-web/refs/heads/main/proyectos/proyecto4/screenshot.png",
   "image": "screenshot.png"
 }
