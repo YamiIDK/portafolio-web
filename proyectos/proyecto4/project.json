@@ -1,0 +1,8 @@
+{
+  "title": "Plataforma de Gestión de Contactos (MVP)",
+  "description": "Proyecto de Práctica/Autodidacta (Demostración de Habilidades). Desarrollado para aplicar y validar conocimientos de desarrollo Backend en un entorno real.",
+  "tech": ["Laravel 12", "PHP 8.3", "MySQL", "Tailwind CSS", "Git", "Bitbucket"],
+  "githubUrl": "https://github.com/YamiIDK/Demos/tree/main/proyecto3",
+  "demoUrl": "Repo: https://bitbucket.org/thegallardocode/sistema-contactos/src/main/",
+  "image": "screenshot.png"
+}
